@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="App12.Tutorial" BackgroundColor="MediumPurple">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.5" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+       
+        <ContentView Grid.Row="0">
+            <controls:CarouselViewControl x:Name="MainCarouselView"
+                                          ShowIndicators="True"
+                                          ShowArrows="True"
+                                          IndicatorsShape="Square"
+                                          IndicatorsTintColor="White"
+                                          CurrentPageIndicatorTintColor="Purple"
+                                         >
+                <controls:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ContentView Grid.Row="0" Padding="60,30,60,0">
+                                <Image Source="{Binding Source}" Aspect="AspectFit"  />
+                            </ContentView>
+                            <ContentView Grid.Row="1" Padding="20,10,20,50">
+                                <Label Text="{Binding TitleName}" HorizontalTextAlignment="Center"/>
+                            </ContentView>
+                           
+                        </Grid>
+                    </DataTemplate>
+                </controls:CarouselViewControl.ItemTemplate>
+            </controls:CarouselViewControl>
+        </ContentView>
+
+
+        <StackLayout Grid.Row="2" Padding="180,15,10,30">
+            <Label x:Name="lblClick" Text="Skip Or Continue" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small"  />
+           
+        </StackLayout>
+    </Grid>
+    <!--<StackLayout>
+        <Button Clicked="Skip_Clicked" Text="SKip" BackgroundColor="Blue" HorizontalOptions="Center" VerticalOptions="Center">
+        </Button>
+    </StackLayout>-->
+
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls1="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="App12.LibraryList">
+  <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+            
+    <!--Built in Cells-->
+        <!--Built in Cells-->
+        <ListView.ItemTemplate>
+            <DataTemplate>
+
+                <ViewCell >
+
+                    <Grid Padding="10" RowSpacing="10" ColumnSpacing="5">
+
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Controls1:CircleImage
+                                HeightRequest="60" HorizontalOptions="CenterAndExpand" VerticalOptions="End"
+                                Aspect="AspectFill" WidthRequest="66"
+                                Grid.RowSpan="2"
+                                Source="cheese_1.jpg"></Controls1:CircleImage>
+
+                        <!--<Label Grid.Column="1"
+                                   Text="Title" VerticalOptions="End" TextColor="Purple"/>-->
+                        <!--<skiarate:RatingView ColorOn="{Binding Source={x:Reference Name=RatingView1}, Path=Value ,ConverterParameter=5}" x:Name="RatingView1" Grid.Column="2"  HeightRequest="1" WidthRequest="1" IsVisible="{Binding Rating}" />-->
+                        <Label Grid.Column="1" Grid.Row="1" x:Name="Comment1" HorizontalOptions="Center"
+                                   VerticalOptions="Center" Text="{Binding Id}"  FontSize="Medium" TextColor="Brown"/>
+                        <Label Grid.Column="2"
+                                   Text="Class" VerticalOptions="End" TextColor="Purple"/>
+                        <Label Grid.Column="2" Grid.Row="1" Text="{Binding Class}"></Label>
+                        <!--<Button x:Name="Save"  IsVisible="{Binding Save}"  FontSize="Small" Grid.Column="2" Grid.Row="1" Clicked="Save_Clicked"  />-->
+
+
+
+
+
+
+                    </Grid>
+
+                </ViewCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

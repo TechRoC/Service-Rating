@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App12.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary-back-title-color">#8A2BE2</Color>
+            <Color x:Key="primary-title-color">#FFFFFF</Color>
+            <Color x:Key="Text-color">#C0C0C0</Color>
+            <Color x:Key="slider-color"></Color>
+            <Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Key=primary-back-title-color}"></Setter>
+                <Setter Property="BarTextColor" Value="{StaticResource Key=primary-title-color}"></Setter>
+            </Style>
+            <Style ApplyToDerivedTypes="True" TargetType="TabbedPage" >
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Key=primary-back-title-color}"></Setter>
+                <!--<Setter Property="BarTextColor" Value="{StaticResource Key=Text-color}"></Setter>-->
+            </Style>
+            
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

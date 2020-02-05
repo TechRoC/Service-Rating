@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:Image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:vm="clr-namespace:App12.Model"
+             xmlns:local="clr-namespace:App12.CustomControls"
+             x:Class="App12.Page3" BackgroundColor="MediumPurple" >
+  
+    <ContentPage.Content>
+        <local:GradientColorStack StartColor="#9370db" EndColor="#DDA0DD">
+            <StackLayout Margin="0,80,0,0">
+                <Label Text="Service Rating" FontSize="Large" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" />
+                <Image:CircleImage Source="Servicerating.ico" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" BorderColor="AliceBlue" BorderThickness="2" VerticalOptions="Center" HorizontalOptions="Center" Margin="30,80,30,10" ></Image:CircleImage>
+            <Button x:Name="Login" Text="Login" Margin="0,20,0,0" Clicked="Button_Clicked" BackgroundColor="SkyBlue" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" ></Button>
+
+           
+            <Label  x:Name="SignUp"  Text="Not have a account Yet ? sign up" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium" FontFamily="Times New Roman" />
+            <StackLayout Padding="0,20,0,0">
+                <Button  Text="Forgot Password" Clicked="Button_Clicked_1" BackgroundColor="SkyBlue" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+        </local:GradientColorStack>
+    </ContentPage.Content>
+</ContentPage>

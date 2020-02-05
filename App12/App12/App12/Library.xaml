@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:App12.CustomControls"
+             x:Class="App12.Library" Title="Library" >
+    <ContentPage.Content>
+        <ScrollView>
+            <local:GradientColorStack StartColor="#9370db" EndColor="#DDA0DD">
+            <StackLayout Margin="5,0,0,0">
+                <Label Text="Library Details" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" FontFamily=" Times New Roman" TextColor="White"/>
+                <Image:CircleImage Source="library3.png" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" BorderColor="AliceBlue" BorderThickness="2"  HorizontalOptions="Center"  ></Image:CircleImage>
+
+                    <Label Text="Does all the required books are available according to your department ? :" FontFamily="Times New Roman" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                    <Label Text="null" TextColor="White"></Label>
+                    <Label Text="Book Name :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"/>
+                    <Label Text="Author name : " Grid.Row="0" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text=" null"  Grid.Row="0" Grid.Column="1" TextColor="White" />
+
+                <BoxView Color="Black" HeightRequest="1" WidthRequest="59" />
+                    <Label Text="Does pc works Fine ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White" />
+                    <Label Text="Pc No :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"/>
+                    <Label Text="Problem :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White" />
+                    <Label Text="null" TextColor="White"></Label>
+                    <Label Text="if other Specify:" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"/>
+                    <Label Text="Rate :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"/>
+
+                    <BoxView Color="Black" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Does Fan working properly ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"/>
+
+                    <BoxView Color="Black" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Condition of benches :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"/>
+
+                    <BoxView Color="Black" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Does Library is clean everyday ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White" />
+                    <Label Text="null" TextColor="White"></Label>
+                    <Label Text="Rating :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="null" TextColor="White"></Label>
+            </StackLayout>
+        </local:GradientColorStack>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launcher_background">#FFFFFF</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#48303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+ <color name="TranslucentColor">#29000000</color>
+  <color name="ForSplash">#9370DB</color>
+  <color name="ListViewSelected">#269370DB</color>
+  <color name="ListViewHighlighted">#800080</color>
+  <color name="Tabcolor">#C0C0C0</color>
+</resources>

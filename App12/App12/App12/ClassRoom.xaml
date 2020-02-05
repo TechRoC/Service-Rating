@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:App12.CustomControls"
+             x:Class="App12.ClassRoom">
+    
+        <ContentPage.Content>
+        <ScrollView>
+            <local:GradientColorStack StartColor="#9370db" EndColor="#DDA0DD">
+                <StackLayout Margin="5,0,0,0">
+                    <!--<Grid Padding="10" RowSpacing="3" >
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>-->
+                    <Label Text="Class Room Details" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" FontFamily=" Times New Roman"/>
+                    <Image:CircleImage Source="classroom.png" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" BorderColor="AliceBlue" BorderThickness="2"  HorizontalOptions="Center"  ></Image:CircleImage>
+                    <Label Text="Class Room :"  FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label x:Name="class"  FontSize="Small" HorizontalOptions="Center"/>
+                    <Label Text="Does PRojector Screen Working Efficiently ? :" FontFamily="Times New Roman" FontSize="Medium" FontAttributes="Bold" />
+                    <Label x:Name="proscreen" ></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="procomment" />
+                    <Label Text="Rating : " Grid.Row="0" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="prorate"  Grid.Row="0" Grid.Column="1" />
+                    <BoxView Color="Gray" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Condition of Benches ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" />
+                    <Label x:Name="Bencon" ></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="Bencom" />
+                    <Label Text="Rating : " Grid.Row="0" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="Benrate"  Grid.Row="0" Grid.Column="1" />
+                    <BoxView Color="Gray" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Does Fans Working PRoperly ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" />
+                    <Label x:Name="Fanproper" ></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="Fancom" />
+                    <Label Text="Rating : " Grid.Row="0" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="Fanrate"  Grid.Row="0" Grid.Column="1" />
+                    <BoxView Color="Gray" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Does Light working Properly ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" />
+                    <Label x:Name="Lightwork" ></Label>
+                    <Label Text="Any Comment :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="Lightcom" />
+                    <Label Text="Rating : " Grid.Row="0" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                    <Label x:Name="Lightrate"  Grid.Row="0" Grid.Column="1" />
+                    <BoxView Color="Gray" HeightRequest="1" WidthRequest="59"/>
+                    <Label Text="Does Class is clean everyday ? :" FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold" />
+                    <Label x:Name="classclean" ></Label>
+
+
+                </StackLayout>
+            </local:GradientColorStack>
+        </ScrollView>
+            
+    </ContentPage.Content>
+    
+</ContentPage>

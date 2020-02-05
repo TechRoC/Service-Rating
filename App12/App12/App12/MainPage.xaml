@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:local="clr-namespace:App12"
+                  xmlns:m1="clr-namespace:App12.Model"
+                  xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+                  x:Class="App12.MainPage" BackgroundColor="White">
+    <MasterDetailPage.Master >
+      
+        <ContentPage Title="Menu">
+            <ContentPage.BindingContext>
+                <m1:LoginModel/>
+            </ContentPage.BindingContext>
+
+            <Grid BackgroundColor="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Image Source="bg.png" Aspect="AspectFill" />
+                        <StackLayout  >
+                            <Image Source="menubackground.png" Aspect="AspectFill" WidthRequest="350" HeightRequest="220" />
+                            
+                        </StackLayout>
+                    <forms:AnimationView 
+    x:Name="AnimationView"
+    Animation="a_user.json"
+    Loop="False"
+    AutoPlay="True"
+                    HeightRequest="80" WidthRequest="80" HorizontalOptions="Start" 
+    />
+                    <Label x:Name="User" TextColor="White" FontSize="Medium" WidthRequest="190" HeightRequest="190" Margin="5,160,0,2" FontAttributes="Bold" HorizontalOptions="Start"  />
+ 
+                </Grid>
+                
+                <StackLayout Margin="0,18,0,0" Grid.Row="1" Spacing="5" >
+                        <!--<ListView x:Name="navigationDrawerList" 
+                        RowHeight="50" SeparatorVisibility="None"  BackgroundColor="WhiteSmoke" ItemSelected="OnMenuItemSelected"  HeightRequest="1">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+
+                                        <StackLayout   Orientation="Horizontal"  >
+
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" IsVisible="{Binding !IsSeparator}" Padding="10,5,0,10" Spacing="12">
+                                            <Image Source="{Binding Icon}" WidthRequest="50" HeightRequest="53" VerticalOptions="Center"  />
+                                            <Label Text="{Binding Title}" FontSize="Small"   VerticalOptions="Center" TextColor="Firebrick" />
+
+                                        </StackLayout>
+                                        <BoxView HeightRequest="1" Color="MediumPurple" HorizontalOptions="FillAndExpand"  IsVisible="{Binding IsSeparator}"  VerticalOptions="End" Margin="0"  ></BoxView>
+                                    </StackLayout>
+
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>-->
+
+                    <!--</ListView>
+                    </StackLayout>-->
+                <ListView x:Name="navigationDrawerList" 
+                        RowHeight="50" SeparatorVisibility="None"  BackgroundColor="WhiteSmoke" ItemSelected="OnMenuItemSelected"  HeightRequest="1" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Grid Padding="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                            
+                                                <Image Source="{Binding Source}" WidthRequest="40" HeightRequest="40"   />
+                                            <Label  Text="{Binding TitleName}" FontSize="Small"  Grid.Column="1"  VerticalOptions="Center" TextColor="{Binding LabelColor}  " />
+                                          
+                                        </Grid>
+                                    <BoxView x:Name="Text1" HeightRequest="1" Color="Gray" IsVisible="{Binding Separator}"/>
+                                       
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                   </StackLayout>
+
+            </Grid>
+            
+
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:HomePage></local:HomePage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

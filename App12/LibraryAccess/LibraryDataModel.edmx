@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FeedbackDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Library">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Bookdecision" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bookname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Author" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pcdecision" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pcnumber" Type="int" />
+          <Property Name="Problem" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pcrate" Type="int" />
+          <Property Name="Fandecision" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fancomment" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fanrate" Type="int" />
+          <Property Name="Benchdecision" Type="nvarchar" MaxLength="50" />
+          <Property Name="Benchcomment" Type="nvarchar" MaxLength="50" />
+          <Property Name="Benchrate" Type="int" />
+          <Property Name="Hygienedecision" Type="nvarchar" MaxLength="50" />
+          <Property Name="Hygienecomment" Type="nvarchar" MaxLength="50" />
+          <Property Name="Hygienerate" Type="int" />
+          <Property Name="Overallrating" Type="int" />
+        </EntityType>
+        <EntityContainer Name="FeedbackDatabaseModelStoreContainer">
+          <EntitySet Name="Library" EntityType="Self.Library" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FeedbackDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Library">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Bookdecision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bookname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pcdecision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pcnumber" Type="Int32" />
+          <Property Name="Problem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pcrate" Type="Int32" />
+          <Property Name="Fandecision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fancomment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fanrate" Type="Int32" />
+          <Property Name="Benchdecision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Benchcomment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Benchrate" Type="Int32" />
+          <Property Name="Hygienedecision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hygienecomment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hygienerate" Type="Int32" />
+          <Property Name="Overallrating" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="LibraryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Libraries" EntityType="Self.Library" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FeedbackDatabaseModelStoreContainer" CdmEntityContainer="LibraryEntities">
+          <EntitySetMapping Name="Libraries">
+            <EntityTypeMapping TypeName="FeedbackDatabaseModel.Library">
+              <MappingFragment StoreEntitySet="Library">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Bookdecision" ColumnName="Bookdecision" />
+                <ScalarProperty Name="Bookname" ColumnName="Bookname" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Pcdecision" ColumnName="Pcdecision" />
+                <ScalarProperty Name="Pcnumber" ColumnName="Pcnumber" />
+                <ScalarProperty Name="Problem" ColumnName="Problem" />
+                <ScalarProperty Name="Pcrate" ColumnName="Pcrate" />
+                <ScalarProperty Name="Fandecision" ColumnName="Fandecision" />
+                <ScalarProperty Name="Fancomment" ColumnName="Fancomment" />
+                <ScalarProperty Name="Fanrate" ColumnName="Fanrate" />
+                <ScalarProperty Name="Benchdecision" ColumnName="Benchdecision" />
+                <ScalarProperty Name="Benchcomment" ColumnName="Benchcomment" />
+                <ScalarProperty Name="Benchrate" ColumnName="Benchrate" />
+                <ScalarProperty Name="Hygienedecision" ColumnName="Hygienedecision" />
+                <ScalarProperty Name="Hygienecomment" ColumnName="Hygienecomment" />
+                <ScalarProperty Name="Hygienerate" ColumnName="Hygienerate" />
+                <ScalarProperty Name="Overallrating" ColumnName="Overallrating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

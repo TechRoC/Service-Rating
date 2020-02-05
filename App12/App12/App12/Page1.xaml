@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="App12.Page1" Title="Page1">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Settings" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="About us" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="LogOut" Order="Secondary"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <!--<Controls:FloatingActionButton
+        x:Name="Main" Clicked="Main_Clicked" Image="plus_circle.xml" HorizontalOptions="End" VerticalOptions="End" BorderRadius="150"  ButtonColor="MediumPurple" Margin="120,300,15,50"  ></Controls:FloatingActionButton>-->
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+            <Label Text="Select Your Chart below" TextColor="MediumPurple" FontAttributes="Bold"  ></Label>
+            <Picker x:Name="picker1" SelectedIndexChanged="Picker1_SelectedIndexChanged" Title="Charts"  />
+                <Label x:Name="InFrastructure" Text="InFrastructure" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart1" HeightRequest="200" />
+                <Label x:Name="ClassRooms" Text="ClassRooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart2" HeightRequest="200" />
+            <Label x:Name="Library" Text="Library" TextColor="MediumPurple" FontSize="Medium"  HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart3" HeightRequest="200" />
+                <Label x:Name="ITLab" Text="IT-Lab" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart4" HeightRequest="200" />
+                <Label x:Name="PCBLabs" Text="PCB-Labs" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart5" HeightRequest="200" />
+                <Label x:Name="ReadingRooms" Text="Reading-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart6" HeightRequest="200" />
+                <Label x:Name="CommonRooms" Text="Common-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart7" HeightRequest="200" />
+                <Label x:Name="ActivityRooms" Text="Activity-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart8" HeightRequest="200" />
+                <Label x:Name="Gym" Text="Gym" TextColor="MediumPurple" HorizontalOptions="Center" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <forms:ChartView x:Name="Chart9" HeightRequest="200" />
+                <!--LineChart-->
+                <Label x:Name="InFrastructure1" Text="InFrastructure" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False" />
+                <forms:ChartView x:Name="Chart11" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ClassRooms1" Text="ClassRooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart21" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Library1" Text="Library" TextColor="MediumPurple" FontSize="Medium"  HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart31" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ITLab1" Text="IT-Lab" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart41" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="PCBLabs1" Text="PCB-Labs" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart51" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ReadingRooms1" Text="Reading-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart61" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="CommonRooms1" Text="Common-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart71" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ActivityRooms1" Text="Activity-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart81" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Gym1" Text="Gym" TextColor="MediumPurple" HorizontalOptions="Center" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart91" HeightRequest="200" IsVisible="False" />
+                <!--PointChart-->
+                <Label x:Name="InFrastructure11" Text="InFrastructure" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False" />
+                <forms:ChartView x:Name="Chart12" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ClassRooms11" Text="ClassRooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart22" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Library11" Text="Library" TextColor="MediumPurple" FontSize="Medium"  HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart32" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ITLab11" Text="IT-Lab" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart42" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="PCBLabs11" Text="PCB-Labs" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart52" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ReadingRooms11" Text="Reading-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart62" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="CommonRooms11" Text="Common-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart72" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ActivityRooms11" Text="Activity-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart82" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Gym11" Text="Gym" TextColor="MediumPurple" HorizontalOptions="Center" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart92" HeightRequest="200" IsVisible="False" />
+                <!--RadialGaugeChart-->
+                <Label x:Name="InFrastructure12" Text="InFrastructure" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False" />
+                <forms:ChartView x:Name="Chart13" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ClassRooms12" Text="ClassRooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart23" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Library12" Text="Library" TextColor="MediumPurple" FontSize="Medium"  HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart33" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ITLab12" Text="IT-Lab" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart43" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="PCBLabs12" Text="PCB-Labs" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart53" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ReadingRooms12" Text="Reading-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart63" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="CommonRooms12" Text="Common-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart73" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ActivityRooms12" Text="Activity-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart83" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Gym12" Text="Gym" TextColor="MediumPurple" HorizontalOptions="Center" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart93" HeightRequest="200" IsVisible="False" />
+                <!--DonutChart-->
+                <Label x:Name="InFrastructure13" Text="InFrastructure" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False" />
+                <forms:ChartView x:Name="Chart14" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ClassRooms13" Text="ClassRooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart24" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Library13" Text="Library" TextColor="MediumPurple" FontSize="Medium"  HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart34" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ITLab13" Text="IT-Lab" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart44" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="PCBLabs13" Text="PCB-Labs" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart54" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ReadingRooms13" Text="Reading-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart64" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="CommonRooms13" Text="Common-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart74" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="ActivityRooms13" Text="Activity-Rooms" TextColor="MediumPurple" FontSize="Medium" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart84" HeightRequest="200" IsVisible="False" />
+                <Label x:Name="Gym13" Text="Gym" TextColor="MediumPurple" HorizontalOptions="Center" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" IsVisible="False"/>
+                <forms:ChartView x:Name="Chart94" HeightRequest="200" IsVisible="False" />
+            <!--RadarChart-->
+           
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App12.View.Registration"
+           
+             xmlns:m1="clr-namespace:App12.Model"
+             xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
+             xmlns:Local="clr-namespace:App12.Behaviors"
+             xmlns:Image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:App12.CustomControls" Title="Registration">
+    <ContentPage.BindingContext>
+        <m1:RegisterModel/>
+    </ContentPage.BindingContext>
+    <local:GradientColorStack StartColor="#9370db" EndColor="#DDA0DD">
+        <StackLayout>
+            <Image:CircleImage Source="User.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" BorderColor="AliceBlue" BorderThickness="2"  HorizontalOptions="Center" Margin="0,80,0,0" ></Image:CircleImage>
+            <StackLayout Margin="15,40,15,150">
+                <Entry  x:Name="email" Text="{Binding Email}" Placeholder="Email" PlaceholderColor="White" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"  >
+                    <Entry.Behaviors>
+                        <Local:EmailValidationBehavior></Local:EmailValidationBehavior>
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Entry x:Name="username" Text="{Binding Username}" Placeholder="UserName" PlaceholderColor="White" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"  >
+                </Entry>
+                <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password" PlaceholderColor="White" VerticalOptions="CenterAndExpand" IsPassword="True"  TextColor="White" FontAttributes="Bold" >
+                    <Entry.Behaviors>
+                        <Local:PasswordValidationBehavior />
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="confirmpassword" Text="{Binding ConfirmPassword}" Placeholder="Confirm Password" PlaceholderColor="White" VerticalOptions="CenterAndExpand" IsPassword="True"  TextColor="White" FontAttributes="Bold" >
+
+                    <Entry.Behaviors>
+                        <Local:PasswordValidationBehavior />
+                        <Local:CompareValidationBehavior CompareToEntry="{Binding Source={x:Reference password}}"/>
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Button x:Name="register" Text="Register"  Command="{Binding RegisterCommand}" Clicked="Button_Clicked_1" HorizontalOptions="Center"  BackgroundColor="SkyBlue" FontSize="Medium" TextColor="White" FontAttributes="Bold"  WidthRequest="120" HeightRequest="50">
+
+
+                </Button>
+
+
+                <Label x:Name="Pagei" Text="Go TO Login"  TextColor="White" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                <Label x:Name="Sent" Text="{Binding email}" FontSize="Small" TextColor="Red"/>
+            </StackLayout>
+
+        </StackLayout>
+    </local:GradientColorStack>
+</ContentPage>

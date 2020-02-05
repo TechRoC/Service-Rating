@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:local="clr-namespace:App12"
+             xmlns:Controls1="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:ViewModels="clr-namespace:App12.ViewModels"
+             x:Class="App12.ListViewPage1" Title="Comments">
+    <ContentPage.BindingContext>
+        <ViewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+   
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Settings" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="About us" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="LogOut" Order="Secondary"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+
+    
+
+    <RelativeLayout>
+        
+                            <ListView x:Name="MyListView"
+            ItemsSource="{Binding classRoomList}"
+            ItemTapped="Handle_ItemTapped"
+                  HasUnevenRows="True"
+            CachingStrategy="RecycleElement"
+                  SeparatorVisibility="Default"
+                  
+                  >
+            
+
+
+
+
+            <!--Built in Cells-->
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                    
+                    <ViewCell >
+                        
+                        <Grid Padding="10" RowSpacing="10" ColumnSpacing="5">
+                           
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Controls1:CircleImage
+                                HeightRequest="60" HorizontalOptions="CenterAndExpand" VerticalOptions="End"
+                                Aspect="AspectFill" WidthRequest="66"
+                                Grid.RowSpan="2"
+                                Source="cheese_1.jpg"></Controls1:CircleImage>
+
+                            <!--<Label Grid.Column="1"
+                                   Text="Title" VerticalOptions="End" TextColor="Purple"/>-->
+                            <!--<skiarate:RatingView ColorOn="{Binding Source={x:Reference Name=RatingView1}, Path=Value ,ConverterParameter=5}" x:Name="RatingView1" Grid.Column="2"  HeightRequest="1" WidthRequest="1" IsVisible="{Binding Rating}" />-->
+                            <Label Grid.Column="1" Grid.Row="1" x:Name="Comment1" HorizontalOptions="Center"
+                                   VerticalOptions="Center" Text="{Binding Id}"  FontSize="Medium" TextColor="Brown"/>
+                            <Label Grid.Column="2"
+                                   Text="Class" VerticalOptions="End" TextColor="Purple"/>
+                            <Label Grid.Column="2" Grid.Row="1" Text="{Binding Class}"></Label>
+                            <!--<Button x:Name="Save"  IsVisible="{Binding Save}"  FontSize="Small" Grid.Column="2" Grid.Row="1" Clicked="Save_Clicked"  />-->
+                          
+
+
+                            
+
+
+                        </Grid>
+
+                    </ViewCell>
+
+                </DataTemplate>
+                                </ListView.ItemTemplate>
+
+            <ListView.Footer>
+
+                <Grid Padding="6" IsVisible="{Binding IsBusy}">
+
+                    <!-- set the footer to have a zero height when invisible -->
+
+                    <Grid.Triggers>
+
+                        <Trigger TargetType="Grid" Property="IsVisible" Value="False">
+
+                            <Setter Property="HeightRequest" Value="0" />
+
+                        </Trigger>
+
+                    </Grid.Triggers>
+
+                    <!-- the loading content -->
+
+                    <Label Text="Loading..." TextColor="DeepPink" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                </Grid>
+
+            </ListView.Footer>
+
+
+            <!--Custom View Cells-->
+                                <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+                            </ListView>
+                       
+
+        <Controls:FloatingActionButton
+        x:Name="subMain"  Image="pencil.xml" HorizontalOptions="End" VerticalOptions="End" BorderRadius="150"  ButtonColor="White" Margin="275,360,15,50" IsVisible="False" Clicked="SubMain_Clicked" ></Controls:FloatingActionButton>
+
+        <!--<Controls:FloatingActionButton
+        x:Name="Main"  Image="ic_plus.xml" BorderRadius="170"  ButtonColor="MediumPurple" Margin="275,450,15,50" Clicked="Main_Clicked" ></Controls:FloatingActionButton>-->
+        <Controls:FloatingActionButton x:Name="Main" Image="ic_plus.xml" BorderRadius="150" HorizontalOptions="End" VerticalOptions="End" Margin=" 275, 420,20, 15" Clicked="Main_Clicked"></Controls:FloatingActionButton>
+        <local:Snacky  x:Name="SnackB" HeightRequest="50" FontSize="{OnPlatform iOS=12, Android=13, UWP=15}" 
+
+                             BackgroundColor="#323232" 
+
+                             TextColor="White"
+
+                             IsOpen="False"
+
+                             VerticalOptions="End"
+
+                             Message="SnackBar is Selected"
+
+                             ButtonTextColor="Pink"
+
+                             CloseButtonText="Undo" Margin="0,500,0,0" />
+    </RelativeLayout>
+</ContentPage>
